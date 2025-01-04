@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://85f6ndm3tnur" path="res://scenes/player.tscn" id="4_c4bno"]
 [ext_resource type="PackedScene" uid="uid://cuck142dbffu2" path="res://scenes/killzone.tscn" id="5_cqfa5"]
 [ext_resource type="PackedScene" uid="uid://q7v1jaf3ksdw" path="res://scenes/coin.tscn" id="6_p1krv"]
-[ext_resource type="PackedScene" uid="uid://7lh6u6uysk7n" path="res://scenes/platform.tscn" id="7_dkr38"]
+[ext_resource type="PackedScene" uid="uid://7lh6u6uysk7n" path="res://scenes/Platforms/platform1.tscn" id="7_dkr38"]
 [ext_resource type="PackedScene" uid="uid://dlh5i1rvetxib" path="res://scenes/slime.tscn" id="8_a23c0"]
 [ext_resource type="FontFile" uid="uid://cjtjdcasoeiwx" path="res://assets/fonts/PixelOperator8.ttf" id="9_65tcp"]
 [ext_resource type="Script" path="res://scripts/slime2.gd" id="10_crpc5"]
