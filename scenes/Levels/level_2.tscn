@@ -11,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://cjtjdcasoeiwx" path="res://assets/fonts/PixelOperator8.ttf" id="9_65tcp"]
 [ext_resource type="Script" path="res://scripts/slime2.gd" id="10_crpc5"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyfef"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jl82s"]
 texture = ExtResource("3_eri7f")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -175,7 +175,7 @@ texture = ExtResource("3_eri7f")
 
 [sub_resource type="TileSet" id="TileSet_1nv8n"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_xyfef")
+sources/0 = SubResource("TileSetAtlasSource_jl82s")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iycon"]
 
