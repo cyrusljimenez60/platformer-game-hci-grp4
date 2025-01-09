@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://dyr7ymmcdk72y"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gkbv4"]
-[ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_jlnm5"]
+[ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_jlnm5"]
 [ext_resource type="Texture2D" uid="uid://c8tfs270cco1r" path="res://assets/sprites/world_tileset.png" id="3_shyar"]
 [ext_resource type="PackedScene" uid="uid://85f6ndm3tnur" path="res://scenes/player.tscn" id="4_kjqd5"]
 [ext_resource type="PackedScene" uid="uid://cuck142dbffu2" path="res://scenes/killzone.tscn" id="5_87i3s"]
 [ext_resource type="PackedScene" uid="uid://q7v1jaf3ksdw" path="res://scenes/coin.tscn" id="6_rxm3r"]
 [ext_resource type="PackedScene" uid="uid://7lh6u6uysk7n" path="res://scenes/Platforms/platform1.tscn" id="7_ys3x0"]
 [ext_resource type="PackedScene" uid="uid://dlh5i1rvetxib" path="res://scenes/slime.tscn" id="8_j2rw3"]
-[ext_resource type="FontFile" uid="uid://cjtjdcasoeiwx" path="res://assets/fonts/PixelOperator8.ttf" id="9_s3s6h"]
+[ext_resource type="FontFile" uid="uid://cjtjdcasoeiwx" path="res://assets/music/fonts/PixelOperator8.ttf" id="9_s3s6h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxm6b"]
 texture = ExtResource("3_shyar")
