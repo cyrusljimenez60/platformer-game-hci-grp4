@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmd1julgmjwbj"
-path="res://.godot/imported/HCI.png-c63330b55e2215731e52e48913eec09e.ctex"
+uid="uid://gj6ydapf1y8b"
+path="res://.godot/imported/buttonbox.png-b9ceba0c55944d2df5eb6a7cf3e89548.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/HCI.png"
-dest_files=["res://.godot/imported/HCI.png-c63330b55e2215731e52e48913eec09e.ctex"]
+source_file="res://assets/images/buttonbox.png"
+dest_files=["res://.godot/imported/buttonbox.png-b9ceba0c55944d2df5eb6a7cf3e89548.ctex"]
 
 [params]
 
