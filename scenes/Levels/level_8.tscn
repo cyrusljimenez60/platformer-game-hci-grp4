@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cwir4gpgmrm3w"]
+[gd_scene load_steps=14 format=3 uid="uid://dnqmdxrye22bc"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ykebk"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_oij1w"]
