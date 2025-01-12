@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://crvbhdov675pe"]
+
+[ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="1_fxl7s"]
+
+[node name="Label" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_fxl7s")
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

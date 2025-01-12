@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://ei0xyibl485c"]
+
+[ext_resource type="Texture2D" uid="uid://dma3wx6en7qj1" path="res://scenes/selectlevel/buttons_atlas_texture.tres" id="1_d4c1m"]
+[ext_resource type="Texture2D" uid="uid://coe1fp760cqd8" path="res://scenes/selectlevel/buttonss.png" id="2_7l7s1"]
+[ext_resource type="Script" path="res://scenes/selectlevel/level_button_1.gd" id="3_5a4ck"]
+[ext_resource type="PackedScene" uid="uid://crvbhdov675pe" path="res://scenes/selectlevel/label.tscn" id="4_bhseb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvssb"]
+atlas = ExtResource("1_d4c1m")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsdce"]
+atlas = ExtResource("2_7l7s1")
+region = Rect2(702, 276, 220, 219)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llbho"]
+atlas = ExtResource("2_7l7s1")
+region = Rect2(423, 585, 219, 219)
+
+[node name="level_button1" type="TextureButton"]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource("AtlasTexture_fvssb")
+texture_hover = SubResource("AtlasTexture_wsdce")
+texture_disabled = SubResource("AtlasTexture_llbho")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_5a4ck")
+locked = false
+
+[node name="Label" parent="." instance=ExtResource("4_bhseb")]
+layout_mode = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
