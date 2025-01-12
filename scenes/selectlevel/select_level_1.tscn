@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=3 uid="uid://4e7yqyw8ulco"]
+
+[ext_resource type="Script" path="res://scenes/selectlevel/select_level_1.gd" id="1_7fe6v"]
+[ext_resource type="Texture2D" uid="uid://by8d72uuo4clj" path="res://images/SELECTTLEVELS.png" id="1_n7410"]
+[ext_resource type="PackedScene" uid="uid://ei0xyibl485c" path="res://scenes/selectlevel/level_button_1.tscn" id="2_dij2m"]
+[ext_resource type="Texture2D" uid="uid://coe1fp760cqd8" path="res://scenes/selectlevel/buttonss.png" id="2_r4470"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8k6x"]
+atlas = ExtResource("2_r4470")
+region = Rect2(998, 276, 220, 219)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6a2t"]
+atlas = ExtResource("2_r4470")
+region = Rect2(1277, 276, 220, 219)
+
+[node name="select_level1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7fe6v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_n7410")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ClipControl" type="Control" parent="TextureRect"]
+layout_mode = 1
+anchor_left = 0.108
+anchor_top = 0.31
+anchor_right = 0.893
+anchor_bottom = 0.778
+offset_left = -0.416
+offset_top = 0.119995
+offset_right = 0.263916
+offset_bottom = -0.144043
+
+[node name="GridContainer1" type="GridContainer" parent="TextureRect/ClipControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="level_button1" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+
+[node name="level_button2" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 2
+locked = true
+
+[node name="level_button3" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 3
+locked = true
+
+[node name="level_button4" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 4
+locked = true
+
+[node name="level_button5" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 5
+locked = true
+
+[node name="level_button6" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 6
+locked = true
+
+[node name="level_button7" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 7
+locked = true
+
+[node name="level_button8" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 8
+locked = true
+
+[node name="level_button9" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 9
+locked = true
+
+[node name="level_button10" parent="TextureRect/ClipControl/GridContainer1" instance=ExtResource("2_dij2m")]
+layout_mode = 2
+disabled = true
+level_num = 10
+locked = true
+
+[node name="BackButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 572.0
+offset_right = 100.0
+offset_bottom = 641.0
+texture_normal = SubResource("AtlasTexture_y8k6x")
+texture_hover = SubResource("AtlasTexture_b6a2t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="TextureRect/BackButton" to="." method="_on_back_button_pressed"]
