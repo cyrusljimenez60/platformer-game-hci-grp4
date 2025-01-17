@@ -179,21 +179,23 @@ sources/0 = SubResource("TileSetAtlasSource_pxm6b")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3oesc"]
 
 [node name="Level1" type="Node2D"]
+position = Vector2(148, -139)
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_gkbv4")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 511.0
-offset_top = -145.0
-offset_right = 617.0
-offset_bottom = -126.0
+offset_left = 659.0
+offset_top = -284.0
+offset_right = 765.0
+offset_bottom = -265.0
 theme_override_fonts/font = ExtResource("2_jlnm5")
 theme_override_font_sizes/font_size = 8
 text = "You collected X coins"
 horizontal_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_g1p8v")
@@ -222,7 +224,7 @@ shape = SubResource("WorldBoundaryShape2D_3oesc")
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("6_rxm3r")]
-position = Vector2(-153, -27)
+position = Vector2(-5, -166)
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -236,12 +238,13 @@ position = Vector2(528, 80)
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = -287.0
-offset_top = -70.0
-offset_right = -192.0
-offset_bottom = -51.0
+offset_left = -139.0
+offset_top = -209.0
+offset_right = -44.0
+offset_bottom = -190.0
 theme_override_fonts/font = ExtResource("9_s3s6h")
 theme_override_font_sizes/font_size = 8
 text = "Press spacebar 
 to jump."
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

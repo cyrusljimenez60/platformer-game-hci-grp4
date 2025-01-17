@@ -384,6 +384,7 @@ theme_override_font_sizes/font_size = 8
 text = "You collected X coins"
 horizontal_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1nv8n")
@@ -513,6 +514,7 @@ theme_override_font_sizes/font_size = 8
 text = "Press spacebar 
 to jump."
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Enemies" type="Node" parent="."]
 
