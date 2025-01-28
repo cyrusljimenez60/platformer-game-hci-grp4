@@ -16,6 +16,7 @@ func _process(delta):
 		
 func resume():
 	get_tree().paused = false
+	visible = false
 
 func pause():
 	get_tree().paused = true
