@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpwhmeip0c7i3"]
+
+[ext_resource type="Script" path="res://scenes/pause menu/pause_menu.gd" id="1_p02qp"]
+[ext_resource type="Theme" uid="uid://crkdg52aws3di" path="res://assets/button.tres" id="2_o2mga"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+custom_minimum_size = Vector2(-1000, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -4.0
+offset_right = 3.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0059, 1.01367)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_p02qp")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(-100, -100)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 503.0
+offset_top = 254.0
+offset_right = -503.0
+offset_bottom = -254.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(-100, -100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_o2mga")
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Paused"
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(-1000, 0)
+layout_mode = 2
+theme = ExtResource("2_o2mga")
+text = "          Resume          "
+
+[node name="Select Levels" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Select Levels"
+
+[node name="Main Menu" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Select Levels" to="." method="_on_select_levels_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

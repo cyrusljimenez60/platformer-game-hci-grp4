@@ -1,8 +1,6 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://uhhx3vh1n1f0"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://uhhx3vh1n1f0"]
 
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="1_8327l"]
-[ext_resource type="Texture2D" uid="uid://8rnngl5cjodq" path="res://scenes/9 (1).png" id="2_acata"]
-[ext_resource type="Texture2D" uid="uid://mixtdsp86t0e" path="res://scenes/8 (1).png" id="2_bur36"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ew6s1"]
 content_margin_left = 4.0
@@ -38,10 +36,8 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xc0w0"]
-texture = ExtResource("2_acata")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nfq5"]
-texture = ExtResource("2_bur36")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksb2p"]
 content_margin_left = 4.0

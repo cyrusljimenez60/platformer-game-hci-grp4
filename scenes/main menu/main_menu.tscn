@@ -73,7 +73,7 @@ layout_mode = 2
 [node name="seperator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
@@ -85,7 +85,7 @@ theme_override_font_sizes/font_size = 20
 action_mode = 0
 text = "START"
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Select Levels" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 theme = ExtResource("3_cpp8f")
@@ -96,7 +96,7 @@ theme_override_font_sizes/font_size = 20
 action_mode = 0
 text = "SELECT LEVEL"
 
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 theme = ExtResource("3_cpp8f")
@@ -106,3 +106,7 @@ theme_override_fonts/font = ExtResource("2_abbnf")
 theme_override_font_sizes/font_size = 20
 action_mode = 0
 text = "QUIT"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Select Levels" to="." method="_on_select_levels_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

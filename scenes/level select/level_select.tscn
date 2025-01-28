@@ -1,0 +1,199 @@
+[gd_scene load_steps=5 format=3 uid="uid://cssc2so2o11ar"]
+
+[ext_resource type="Texture2D" uid="uid://bj26gem3mkkna" path="res://images/HCI_select.png" id="1_767wk"]
+[ext_resource type="Script" path="res://scenes/level select/level_select.gd" id="1_xs2qv"]
+[ext_resource type="Theme" uid="uid://uhhx3vh1n1f0" path="res://scenes/level_button.tres" id="2_o55yx"]
+[ext_resource type="Theme" uid="uid://crkdg52aws3di" path="res://assets/button.tres" id="3_rg06q"]
+
+[node name="Level Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_xs2qv")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_767wk")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="Background"]
+layout_mode = 1
+anchor_left = 0.062
+anchor_top = 0.222
+anchor_right = 0.944
+anchor_bottom = 0.849
+offset_left = 0.575996
+offset_top = 0.143982
+offset_right = -0.488037
+offset_bottom = -0.152039
+theme = ExtResource("2_o55yx")
+
+[node name="b1" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071
+anchor_top = 0.175
+anchor_right = 0.168
+anchor_bottom = 0.413
+offset_left = 24.935
+offset_top = 21.95
+offset_right = -23.52
+offset_bottom = -23.678
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_o55yx")
+text = "1"
+
+[node name="b2" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.262
+anchor_top = 0.175
+anchor_right = 0.364
+anchor_bottom = 0.425
+offset_left = 29.07
+offset_top = 22.95
+offset_right = -24.46
+offset_bottom = -27.55
+text = "2"
+
+[node name="b3" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453
+anchor_top = 0.172
+anchor_right = 0.553
+anchor_bottom = 0.415
+offset_left = 26.205
+offset_top = 25.168
+offset_right = -25.295
+offset_bottom = -22.49
+text = "3"
+
+[node name="b4" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.647
+anchor_top = 0.172
+anchor_right = 0.744
+anchor_bottom = 0.414
+offset_left = 24.295
+offset_top = 22.168
+offset_right = -24.16
+offset_bottom = -25.084
+text = "4"
+
+[node name="b5" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.836
+anchor_top = 0.18
+anchor_right = 0.935
+anchor_bottom = 0.418
+offset_left = 26.46
+offset_top = 16.92
+offset_right = -24.0251
+offset_bottom = -28.708
+text = "5"
+
+[node name="b6" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.072
+anchor_top = 0.579
+anchor_right = 0.17
+anchor_bottom = 0.805
+offset_left = 23.92
+offset_top = 18.926
+offset_right = -25.55
+offset_bottom = -21.83
+text = "6"
+
+[node name="b7" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267
+anchor_top = 0.571
+anchor_right = 0.358
+anchor_bottom = 0.805
+offset_left = 20.995
+offset_top = 19.174
+offset_right = -21.37
+offset_bottom = -24.83
+text = "7"
+
+[node name="b8" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.457
+anchor_top = 0.575
+anchor_right = 0.549
+anchor_bottom = 0.805
+offset_left = 19.145
+offset_top = 20.55
+offset_right = -24.235
+offset_bottom = -21.83
+text = "8"
+
+[node name="b9" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.646
+anchor_top = 0.579
+anchor_right = 0.741
+anchor_bottom = 0.813
+offset_left = 25.31
+offset_top = 16.926
+offset_right = -21.1151
+offset_bottom = -27.078
+text = "9"
+
+[node name="b10" type="Button" parent="Background/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.838
+anchor_top = 0.571
+anchor_right = 0.937
+anchor_bottom = 0.805
+offset_left = -3.57007
+offset_top = 22.174
+offset_right = -4.05505
+offset_bottom = -21.83
+text = "10"
+
+[node name="Main Menu" type="Button" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.433
+anchor_top = 0.87
+anchor_right = 0.573
+anchor_bottom = 0.983
+offset_left = -23.816
+offset_top = 0.239929
+offset_right = 24.904
+offset_bottom = 0.0159912
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_rg06q")
+text = "Main Menu"
+
+[connection signal="pressed" from="Background/Control/b1" to="." method="_on_b_1_pressed"]
+[connection signal="pressed" from="Background/Control/b2" to="." method="_on_b_2_pressed"]
+[connection signal="pressed" from="Background/Control/b3" to="." method="_on_b_3_pressed"]
+[connection signal="pressed" from="Background/Control/b4" to="." method="_on_b_4_pressed"]
+[connection signal="pressed" from="Background/Control/b5" to="." method="_on_b_5_pressed"]
+[connection signal="pressed" from="Background/Control/b6" to="." method="_on_b_6_pressed"]
+[connection signal="pressed" from="Background/Control/b7" to="." method="_on_b_7_pressed"]
+[connection signal="pressed" from="Background/Control/b8" to="." method="_on_b_8_pressed"]
+[connection signal="pressed" from="Background/Control/b9" to="." method="_on_b_9_pressed"]
+[connection signal="pressed" from="Background/Control/b10" to="." method="_on_b_10_pressed"]
+[connection signal="pressed" from="Background/Main Menu" to="." method="_on_main_menu_pressed"]
