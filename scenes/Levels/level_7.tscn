@@ -1,14 +1,18 @@
-[gd_scene load_steps=38 format=3 uid="uid://bxh6l2lg1nkje"]
+[gd_scene load_steps=42 format=3 uid="uid://bxh6l2lg1nkje"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_hnxwq"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_vi7xg"]
 [ext_resource type="Texture2D" uid="uid://c8tfs270cco1r" path="res://assets/sprites/world_tileset.png" id="3_tb6nm"]
 [ext_resource type="PackedScene" uid="uid://85f6ndm3tnur" path="res://scenes/player.tscn" id="4_43van"]
+[ext_resource type="PackedScene" uid="uid://cpwhmeip0c7i3" path="res://scenes/pause menu/pause_menu.tscn" id="5_hkyuj"]
 [ext_resource type="PackedScene" uid="uid://cuck142dbffu2" path="res://scenes/killzone.tscn" id="5_qpnko"]
 [ext_resource type="PackedScene" uid="uid://q7v1jaf3ksdw" path="res://scenes/coin.tscn" id="6_0rr53"]
+[ext_resource type="Script" path="res://scenes/pause menu/pause_menu.gd" id="6_lrku5"]
 [ext_resource type="PackedScene" uid="uid://bswcloep6h50t" path="res://scenes/Platforms/platform3.tscn" id="7_udfke"]
 [ext_resource type="PackedScene" uid="uid://dn7e38ipjo41l" path="res://scenes/Platforms/platform4.tscn" id="8_dagqj"]
+[ext_resource type="PackedScene" uid="uid://d2fju1f14ax86" path="res://scenes/game over/game_over.tscn" id="8_v35kx"]
 [ext_resource type="PackedScene" uid="uid://c3pw7dswcahiw" path="res://scenes/slime_purple.tscn" id="9_7clsv"]
+[ext_resource type="Script" path="res://scenes/game over/game_over.gd" id="9_12mox"]
 [ext_resource type="PackedScene" uid="uid://dlh5i1rvetxib" path="res://scenes/slime.tscn" id="10_l4q4u"]
 [ext_resource type="Script" path="res://scripts/slime3.gd" id="11_x858m"]
 
@@ -495,12 +499,22 @@ limit_bottom = 120
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
+
+[node name="PauseMenu" parent="Player/Camera2D/CanvasLayer" instance=ExtResource("5_hkyuj")]
+visible = false
+script = ExtResource("6_lrku5")
+
 [node name="Killzone" parent="." instance=ExtResource("5_qpnko")]
 position = Vector2(1830, 120)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, 1)
 shape = SubResource("WorldBoundaryShape2D_iycon")
+
+[node name="GameOver" parent="Killzone/CollisionShape2D" instance=ExtResource("8_v35kx")]
+visible = false
+script = ExtResource("9_12mox")
 
 [node name="Coins" type="Node" parent="."]
 
