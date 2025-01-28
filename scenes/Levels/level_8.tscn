@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dnqmdxrye22bc"]
+[gd_scene load_steps=22 format=3 uid="uid://dnqmdxrye22bc"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ykebk"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_oij1w"]
@@ -7,10 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cpwhmeip0c7i3" path="res://scenes/pause menu/pause_menu.tscn" id="5_b61mb"]
 [ext_resource type="PackedScene" uid="uid://cuck142dbffu2" path="res://scenes/killzone.tscn" id="5_tcb2f"]
 [ext_resource type="PackedScene" uid="uid://q7v1jaf3ksdw" path="res://scenes/coin.tscn" id="6_ay5aj"]
-[ext_resource type="Script" path="res://scenes/pause menu/pause_menu.gd" id="6_cjk6m"]
 [ext_resource type="PackedScene" uid="uid://e04imwig2qsv" path="res://scenes/Platforms/platform7.tscn" id="7_e7aig"]
-[ext_resource type="PackedScene" uid="uid://d2fju1f14ax86" path="res://scenes/game over/game_over.tscn" id="8_vfj68"]
-[ext_resource type="Script" path="res://scenes/game over/game_over.gd" id="9_7vqof"]
 [ext_resource type="PackedScene" uid="uid://dlh5i1rvetxib" path="res://scenes/slime.tscn" id="9_ddd1u"]
 [ext_resource type="PackedScene" uid="uid://c3pw7dswcahiw" path="res://scenes/slime_purple.tscn" id="9_x6ge0"]
 [ext_resource type="Script" path="res://scripts/slime3.gd" id="11_tca0y"]
@@ -279,7 +276,6 @@ position_smoothing_enabled = true
 
 [node name="PauseMenu" parent="Player/Camera2D/CanvasLayer" instance=ExtResource("5_b61mb")]
 visible = false
-script = ExtResource("6_cjk6m")
 
 [node name="Killzone" parent="." instance=ExtResource("5_tcb2f")]
 position = Vector2(446, 90)
@@ -287,10 +283,6 @@ position = Vector2(446, 90)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, 1)
 shape = SubResource("WorldBoundaryShape2D_iycon")
-
-[node name="GameOver" parent="Killzone/CollisionShape2D" instance=ExtResource("8_vfj68")]
-visible = false
-script = ExtResource("9_7vqof")
 
 [node name="Coins" type="Node" parent="."]
 
