@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cgw1wlb4g4284"]
+[gd_scene load_steps=22 format=3 uid="uid://cgw1wlb4g4284"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_wiuek"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_0h0s0"]
@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://cpwhmeip0c7i3" path="res://scenes/pause menu/pause_menu.tscn" id="5_0t3l6"]
 [ext_resource type="PackedScene" uid="uid://cuck142dbffu2" path="res://scenes/killzone.tscn" id="5_b8hlf"]
 [ext_resource type="PackedScene" uid="uid://q7v1jaf3ksdw" path="res://scenes/coin.tscn" id="6_nhjmp"]
+[ext_resource type="Script" path="res://scripts/parent_coin.gd" id="7_c7rfw"]
 [ext_resource type="PackedScene" uid="uid://dlh5i1rvetxib" path="res://scenes/slime.tscn" id="8_x5j5d"]
 [ext_resource type="Script" path="res://scripts/slime3.gd" id="9_ur8k3"]
-[ext_resource type="PackedScene" uid="uid://de60wo48rf50p" path="res://scenes/Platforms/platform6.tscn" id="10_mofwf"]
-[ext_resource type="PackedScene" uid="uid://nwppltwl45bn" path="res://scenes/Platforms/platform5.tscn" id="10_um4gp"]
+[ext_resource type="PackedScene" uid="uid://de60wo48rf50p" path="res://scenes/platforms/platform6.tscn" id="10_mofwf"]
+[ext_resource type="PackedScene" uid="uid://nwppltwl45bn" path="res://scenes/platforms/platform5.tscn" id="10_um4gp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxm6b"]
 texture = ExtResource("3_dmuty")
@@ -235,10 +236,10 @@ unique_name_in_owner = true
 script = ExtResource("1_wiuek")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 1057.0
-offset_top = -343.0
-offset_right = 1163.0
-offset_bottom = -324.0
+offset_left = 967.0
+offset_top = -339.0
+offset_right = 1073.0
+offset_bottom = -320.0
 theme_override_fonts/font = ExtResource("2_0h0s0")
 theme_override_font_sizes/font_size = 8
 text = "You collected X coins"
@@ -276,6 +277,7 @@ position = Vector2(80, 133)
 shape = SubResource("WorldBoundaryShape2D_3oesc")
 
 [node name="Coins" type="Node" parent="."]
+script = ExtResource("7_c7rfw")
 
 [node name="Coin" parent="Coins" instance=ExtResource("6_nhjmp")]
 position = Vector2(108, -67)
