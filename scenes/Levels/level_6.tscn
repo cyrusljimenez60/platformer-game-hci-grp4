@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dqj0q7euy3g77"]
+[gd_scene load_steps=25 format=3 uid="uid://dqj0q7euy3g77"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bi485"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_jirhh"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bswcloep6h50t" path="res://scenes/platforms/platform3.tscn" id="9_u0kyb"]
 [ext_resource type="Script" path="res://scripts/slime3.gd" id="10_mma75"]
 [ext_resource type="Script" path="res://scripts/slime2.gd" id="10_vf131"]
+[ext_resource type="PackedScene" uid="uid://ch4n47svwsmkh" path="res://scenes/flag.tscn" id="14_kibbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrocm"]
 texture = ExtResource("3_nuevc")
@@ -500,6 +501,10 @@ position = Vector2(1814, -388)
 
 [node name="SlimePurple" parent="Enemies" instance=ExtResource("8_1sg7d")]
 position = Vector2(1519, -272)
+
+[node name="Flag" parent="." instance=ExtResource("14_kibbm")]
+position = Vector2(1876, -289)
+collision_mask = 2
 
 [connection signal="body_entered" from="Ladders/Ladder" to="Player" method="_on_ladder_body_entered"]
 [connection signal="body_exited" from="Ladders/Ladder" to="Player" method="_on_ladder_body_exited"]

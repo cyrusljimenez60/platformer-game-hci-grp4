@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GlobalMusic="*res://scenes/global_music.tscn"
 
+[global_group]
+
+Player=""
+
 [input]
 
 ui_up={

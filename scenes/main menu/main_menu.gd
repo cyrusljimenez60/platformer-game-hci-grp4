@@ -11,7 +11,7 @@ extends Control
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Levels/Level1.tscn")
+	get_tree().change_scene_to_file("res://scenes/Levels/level_1.tscn")
 
 
 func _on_select_levels_pressed() -> void:

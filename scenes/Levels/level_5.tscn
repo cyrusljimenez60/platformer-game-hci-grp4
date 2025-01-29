@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cgw1wlb4g4284"]
+[gd_scene load_steps=23 format=3 uid="uid://cgw1wlb4g4284"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_wiuek"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_0h0s0"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/slime3.gd" id="9_ur8k3"]
 [ext_resource type="PackedScene" uid="uid://de60wo48rf50p" path="res://scenes/platforms/platform6.tscn" id="10_mofwf"]
 [ext_resource type="PackedScene" uid="uid://nwppltwl45bn" path="res://scenes/platforms/platform5.tscn" id="10_um4gp"]
+[ext_resource type="PackedScene" uid="uid://ch4n47svwsmkh" path="res://scenes/flag.tscn" id="13_11ufj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxm6b"]
 texture = ExtResource("3_dmuty")
@@ -409,10 +410,10 @@ position = Vector2(1003, -258)
 position = Vector2(1019, -274)
 
 [node name="Coin44" parent="Coins" instance=ExtResource("6_nhjmp")]
-position = Vector2(1058, -311)
+position = Vector2(728, -309)
 
 [node name="Coin45" parent="Coins" instance=ExtResource("6_nhjmp")]
-position = Vector2(1075, -311)
+position = Vector2(1051, -307)
 
 [node name="Ladders" type="Node" parent="."]
 
@@ -484,6 +485,10 @@ position = Vector2(907, -121)
 rotation = -3.14159
 scale = Vector2(1, -1)
 script = ExtResource("9_ur8k3")
+
+[node name="Flag" parent="." instance=ExtResource("13_11ufj")]
+position = Vector2(934, -209)
+collision_mask = 2
 
 [connection signal="body_entered" from="Ladders/Ladder" to="Player" method="_on_ladder_body_entered"]
 [connection signal="body_exited" from="Ladders/Ladder" to="Player" method="_on_ladder_body_exited"]

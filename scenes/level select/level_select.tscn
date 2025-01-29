@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bj26gem3mkkna" path="res://images/HCI_select.png" id="1_767wk"]
 [ext_resource type="Script" path="res://scenes/level select/level_select.gd" id="1_xs2qv"]
-[ext_resource type="Theme" uid="uid://uhhx3vh1n1f0" path="res://scenes/level_button.tres" id="2_o55yx"]
+[ext_resource type="Theme" uid="uid://uhhx3vh1n1f0" path="res://scenes/selectlevel/level_button.tres" id="2_o55yx"]
 [ext_resource type="Theme" uid="uid://crkdg52aws3di" path="res://assets/button.tres" id="3_rg06q"]
 
 [node name="Level Select" type="Control"]

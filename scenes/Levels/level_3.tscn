@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://iax0j3hj2xb4"]
+[gd_scene load_steps=20 format=3 uid="uid://iax0j3hj2xb4"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kheq7"]
 [ext_resource type="FontFile" uid="uid://baop7elvjj4fs" path="res://assets/music/fonts/PixelOperator8-Bold.ttf" id="2_l8q3p"]
@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://cjtjdcasoeiwx" path="res://assets/music/fonts/PixelOperator8.ttf" id="8_qkf4i"]
 [ext_resource type="Script" path="res://scripts/slime3.gd" id="10_2paph"]
 [ext_resource type="PackedScene" uid="uid://dnodbmuduix34" path="res://scenes/platforms/platform2.tscn" id="10_417o1"]
+[ext_resource type="PackedScene" uid="uid://ch4n47svwsmkh" path="res://scenes/flag.tscn" id="14_noiqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1i6k"]
 texture = ExtResource("3_32e3l")
@@ -194,10 +195,10 @@ unique_name_in_owner = true
 script = ExtResource("1_kheq7")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 806.0
-offset_top = -297.0
-offset_right = 912.0
-offset_bottom = -278.0
+offset_left = 760.0
+offset_top = -293.0
+offset_right = 866.0
+offset_bottom = -274.0
 theme_override_fonts/font = ExtResource("2_l8q3p")
 theme_override_font_sizes/font_size = 8
 text = "You collected X coins"
@@ -308,13 +309,13 @@ position = Vector2(552, -288)
 position = Vector2(681, -246)
 
 [node name="Coin24" parent="Coins" instance=ExtResource("6_duxs4")]
-position = Vector2(857, -261)
+position = Vector2(809, -246)
 
 [node name="Coin25" parent="Coins" instance=ExtResource("6_duxs4")]
-position = Vector2(873, -261)
+position = Vector2(824, -246)
 
 [node name="Coin26" parent="Coins" instance=ExtResource("6_duxs4")]
-position = Vector2(873, -261)
+position = Vector2(850, -261)
 
 [node name="Ladders" type="Node" parent="."]
 
@@ -399,6 +400,10 @@ position = Vector2(616, -140)
 rotation = -3.14159
 scale = Vector2(1, -1)
 script = ExtResource("10_2paph")
+
+[node name="Flag" parent="." instance=ExtResource("14_noiqd")]
+position = Vector2(859, -161)
+collision_mask = 2
 
 [connection signal="body_entered" from="Ladders/Ladder" to="Player" method="_on_ladder_body_entered"]
 [connection signal="body_exited" from="Ladders/Ladder" to="Player" method="_on_ladder_body_exited"]
